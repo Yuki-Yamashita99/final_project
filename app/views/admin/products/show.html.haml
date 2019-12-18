@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @product.name
+%p
+  %b Discription:
+  = @product.discription
+%p
+  %b Price:
+  = @product.price
+%p
+  %b Category:
+  = @product.category
+%p
+  %b Stock:
+  = @product.stock
+%p
+  %b Availability:
+  = @product.availability
+%p
+  %b Status:
+  = @product.status
+%p
+  %b Location:
+  = @product.location
+%p
+  %b Organic:
+  = @product.organic
+
+= link_to 'Edit', edit_admin_product_path(@product)
+\|
+= link_to 'Back', admin_products_path

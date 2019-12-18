@@ -1,0 +1,28 @@
+= bootstrap_form_for [:admin, @product] do |f|
+  - if @product.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@product.errors.count, "error")} prohibited this product from being saved:"
+      %ul
+        - @product.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.text_field :name
+  .field
+    = f.text_area :discription
+  .field
+    = f.number_field :price
+  .field
+    = f.text_field :category
+  .field
+    = f.number_field :stock
+  .field
+    = f.check_box :availability
+  .field
+    = f.text_field :status
+  .field
+    = f.text_field :location
+  .field
+    = f.check_box :organic
+  .actions
+    = f.submit 'Save'

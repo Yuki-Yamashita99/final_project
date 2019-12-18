@@ -1,0 +1,33 @@
+%h1 Listing products
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Discription
+      %th Price
+      %th Category
+      %th Stock
+      %th Availability
+      %th Status
+      %th Location
+      %th Organic
+      %th
+      
+
+  %tbody
+    - @products.each do |product|
+      %tr
+        %td= product.name
+        %td= product.discription
+        %td= product.price
+        %td= product.category
+        %td= product.stock
+        %td= product.availability
+        %td= product.status
+        %td= product.location
+        %td= product.organic
+        %td= link_to 'Show', product
+       
+
+%br
